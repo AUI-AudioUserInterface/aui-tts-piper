@@ -1,0 +1,19 @@
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aui-adapter-tts-piper"
+version = "0.1.0"
+description = "Piper TTS backend for AUI (skeleton)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "GPL-3.0-only"}
+authors = [{ name = "AUI AudioUserInterface" }]
+
+[project.entry-points."aui.tts_backends"]
+piper = "aui_adapter_tts_piper:PiperTTS"
+
+[tool.setuptools.packages.find]
+where = ["src"]
